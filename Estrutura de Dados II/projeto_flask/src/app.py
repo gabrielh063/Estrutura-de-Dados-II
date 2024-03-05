@@ -10,6 +10,7 @@ def index():
     return "<h1 align='center'>funcionante</h1>"
 
 @app.route("/calcula", methods=["GET"])
+<<<<<<< HEAD
     
 def calcula():
 # http://127.0.0.1:5000/calcula?qtd=20&preco=10
@@ -34,6 +35,13 @@ def soma_ate():
         }   
     except Exception as e:
         return f"Falha no processamento {e}"
+=======
+# http://127.0.0.1:5000/calcula?qtd=20&preco=10
+def calcula():
+    qtd = int(request.args.get("qtd"))
+    preco = int(request.args.get('preco'))
+    return f"<h1 align='center'>R${qtd*preco}</h1>"
+>>>>>>> da1c5e7e4eef9aa5144d779f1e84fde76df192af
 
 # iniciar o app
 # usar somente em area de desenvolvimento, nao de producao
