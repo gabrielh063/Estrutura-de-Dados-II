@@ -48,6 +48,7 @@ def valor_max(nome):
 def ordem_crescente(nome):
     dados = busca(nome)
     lista = get_res(dados)
+    # selection sort function
     for i in range(0, len(lista) -1):
         menor = i
         for j in range(i+1, len(lista)):
@@ -55,3 +56,15 @@ def ordem_crescente(nome):
                 menor = j
             lista[i], lista[menor] = lista[menor], lista[i]
     return lista
+
+def bubble_sort(nome):
+    dados = busca(nome)
+    lista = get_res(dados)
+    j = len(lista)-1
+    while j>0:
+        for i in range(0,j):
+            if lista[i]["frequencia"]>lista[i+1]["frequencia"]:
+                lista[i],lista[i+1] = lista[i+1], lista[i]
+        j = j-1
+    return j
+

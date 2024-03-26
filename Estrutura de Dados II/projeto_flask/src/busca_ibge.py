@@ -1,5 +1,5 @@
 from flask import Flask, request
-from ibge import busca, soma_frequencia, valor_min, valor_max, ordem_crescente
+from ibge import busca, soma_frequencia, valor_min, valor_max, ordem_crescente, bubble_sort
 
 app = Flask(__name__)
 
@@ -53,4 +53,12 @@ def crescente():
     except Exception as e:
         return f'falha na rota /ordem_crescente:  {e}'
 
+@app.route("/crescente_diferente")
+def bubble():
+    try:
+        nome = request.args.get("nome")
+        lista = bubble_sort(nome)
+        return lista
+    except Exception as e:
+        return f"falha na rota /bubble_sort: {e}"
 app.run(debug=True)
