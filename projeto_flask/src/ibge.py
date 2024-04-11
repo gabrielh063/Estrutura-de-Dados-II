@@ -46,9 +46,9 @@ def valor_max(nome):
     return periodo, maximo
 
 def ordem_crescente(nome):
+    # selection sort function
     dados = busca(nome)
     lista = get_res(dados)
-    # selection sort function
     for i in range(0, len(lista) -1):
         menor = i
         for j in range(i+1, len(lista)):
