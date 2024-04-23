@@ -95,7 +95,7 @@ def merge_sort():
         direita, comparacoes_direita = merge_sort_auxiliar(cidades[meio:])
         return merge(esquerda, direita), comparacoes_esquerda + comparacoes_direita
 
-    cidades = obter_cidades()  # Certifique-se de que a função obter_cidades() está definida
+    cidades = obter_cidades()  
     tempo_inicio = time.time()
     cidades_ordenadas, comparacoes = merge_sort_auxiliar(cidades)
     tempo_execucao = time.time() - tempo_inicio
