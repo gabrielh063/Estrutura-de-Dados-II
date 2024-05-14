@@ -19,8 +19,11 @@ def adicionar():
     heapq.heappush(listaTarefas, (1/prioridade, obj))
 
 def realizar():
-    tarefa = heapq.heappop(listaTarefas) # tarefa de "maior" prioridade
-    print(tarefa[1].info())
+    if len(listaTarefas) > 0:
+        tarefa = heapq.heappop(listaTarefas) # tarefa de "maior" prioridade
+        print(tarefa[1].info())
+    else:
+        print("Nao tem Tarefa")
 
 def consultar():
     for item in listaTarefas:
