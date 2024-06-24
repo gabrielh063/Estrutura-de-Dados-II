@@ -8,6 +8,7 @@ public class Biblioteca {
     public Biblioteca(){
         dados = new LinkedList<Livro>();
     }
+
     public void inserir(Livro livro){
         if(!dados.contains(livro)){
             dados.add(livro);
@@ -17,11 +18,13 @@ public class Biblioteca {
         System.out.println("Inserir");
         System.out.println(dados);
     }
+
     public void mostrarTodos(){
         for (Livro livro : dados) {
             System.out.println(livro);
         }
     }
+
     public void buscarId(int idProcurado){
         Livro idEncontrado = null;
         for (Livro idLivro : dados) {
@@ -33,13 +36,13 @@ public class Biblioteca {
         }
         System.out.println("Livro nao encontrado"); 
     }
+
     public void removeLivros(int idLivro){
         for (Livro livro : dados) {
-            if (livro.getId() == idLivro)
+            if (livro.getId() == idLivro) {
             dados.remove(livro);
             System.out.println(livro + " removido com sucesso");
-            break;
+            }
         }
-        System.out.println("Livro nao encontrado");
     }
 }
