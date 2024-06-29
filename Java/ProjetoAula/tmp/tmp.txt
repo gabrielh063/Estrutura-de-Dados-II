@@ -1,0 +1,21 @@
+Livro obj1 = new Livro("A Arte da Guerra", "Sun Tzu", "1910");
+        Livro obj2 = new Livro("Cem Anos de Solidão", "Gabriel García Márquez", "1967");
+        Livro obj3 = new Livro("O Príncipe", "Nicolau Maquiavel", "1532");
+        Usuario obj4 = new Usuario("Maria Oliveira", "maria.oliveira@email.com");
+        Usuario obj5 = new Usuario("João Silva", "joao.silva@email.com");
+
+        Biblioteca bib = new Biblioteca();
+        bib.adicionarLivro(obj1);
+        bib.adicionarLivro(obj2);
+        bib.adicionarLivro(obj3);
+        bib.adicionarLivro(obj2);
+        bib.buscarLivro(1);
+        bib.listarLivros();
+        bib.removerLivro(3);
+        bib.listarLivros();
+        bib.adicionarUsuario(obj4);
+        bib.adicionarUsuario(obj5);
+        bib.listarUsuarios();
+        bib.buscarUsuario(1);
+        bib.removerUsuario(1);
+        bib.listarUsuarios();
